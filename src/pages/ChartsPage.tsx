@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import * as d3 from 'd3';
 
 export const ChartsPage = () => {
-  const [data , _ ] = useState([24, 30, 45, 60, 20, 65, 75]);
+  const [data] = useState([24, 30, 45, 60, 20, 65, 75]);
   const svgRef = useRef();
 
   useEffect(() => {
