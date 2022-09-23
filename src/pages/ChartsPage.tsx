@@ -18,11 +18,24 @@ export const ChartsPage = () => {
       .domain([0, data.length - 1])
       .range([0, w]);
     const yScale = d3.scaleLinear()
+    //@ts-ignore
       .domain([0, d3.max(data)])
       .range([0, h]);
     //set the line
-
-
+    const line = d3.line()
+      .x((value, index) => xScale(index))
+      //@ts-ignore
+      .y(yScale)
+      .curve(d3.curveCardinal);
+    //draw the line
+    svg.selectAll('path')
+      .data([data])
+      .join('path')
+      //@ts-ignore
+      .attr('d', value => line(value))
+      .attr('fill', 'none')
+      .attr('stroke', 'blue');
+      
 
   }, [data]);
 
