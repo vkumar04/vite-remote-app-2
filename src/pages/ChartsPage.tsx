@@ -3,12 +3,13 @@ import * as d3 from 'd3';
 
 export const ChartsPage = () => {
   const [data , _ ] = useState([24, 30, 45, 60, 20, 65, 75]);
-  const svgRef = useRef(null);
+  const svgRef = useRef();
 
   useEffect(() => {
     //set up the svg
     const w = 400;
     const h = 100;
+    //@ts-ignore
     const svg = d3.select(svgRef.current)
       .attr('width', w)
       .attr('height', h)
