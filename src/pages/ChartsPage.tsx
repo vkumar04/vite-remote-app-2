@@ -41,7 +41,6 @@ export const ChartsPage = () => {
   return (
     <div>
       <h1>Remote Charts Page using D3</h1>
-      /
       <svg ref={svgRef} />
     </div>
   );
