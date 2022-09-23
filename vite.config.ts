@@ -13,5 +13,8 @@ export default defineConfig({
       },
       shared: ['react', 'react-dom', 'd3'],
   })
-  ]
+  ],
+  build: {
+    target: "esnext"
+  }
 })
