@@ -11,7 +11,7 @@ export default defineConfig({
       exposes: {
           './Charts': './src/pages/ChartsPage.tsx',
       },
-      shared: ['react', 'react-dom'],
+      shared: ['react', 'react-dom', 'd3'],
   })
   ]
 })
